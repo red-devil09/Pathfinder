@@ -1,5 +1,5 @@
 var totalRows = 23;
-var totalCols = 40;
+var totalCols = 45;
 var inProgress = false;
 //var initialMessage = "Click or drag cells to build walls! Press start when you finish and have selected an algorithm!";
 var cellsToAnimate = [];
@@ -8,8 +8,8 @@ var algorithm = null;
 var justFinished = false;
 var animationSpeed = "Fast"; //by default
 var animationState = null;
-var startCell = [11, 15]; //by default
-var endCell = [11, 25]; //by default
+var startCell = [8, 15]; //by default
+var endCell = [18, 25]; //by default
 
 var movingStart = false;
 var movingEnd = false;
@@ -76,9 +76,9 @@ $("#speed .dropdown-item").click(function () {
 //2222222222222222222222222222222222222222222222222222222222222222222222222222222222222
 function updateStartBtnText() {
   if (algorithm == "Depth-First-Search") {
-    $("#startBtn").html("Start DFS");
+    $("#startBtn").html("Visualize DFS");
   }else if (algorithm == "Breadth-First-Search") {
-    $("#startBtn").html("Start BFS");
+    $("#startBtn").html("Visualize BFS");
   }
   return;
 }
@@ -86,8 +86,8 @@ function updateStartBtnText() {
 function updateSpeedDisplay() {
   if (animationSpeed == "Slow") {
     $(".speedDisplay").text("Speed: Slow");
-  } else if (animationSpeed == "Normal") {
-    $(".speedDisplay").text("Speed: Normal");
+  } else if (animationSpeed == "Medium") {
+    $(".speedDisplay").text("Speed: Medium");
   } else if (animationSpeed == "Fast") {
     $(".speedDisplay").text("Speed: Fast");
   }
@@ -323,7 +323,7 @@ function getDelay() {
     } else {
       delay = 20;
     }
-  } else if (animationSpeed === "Normal") {
+  } else if (animationSpeed === "Medium") {
     if (algorithm == "Depth-First-Search") {
       delay = 15;
     } else {
@@ -331,7 +331,7 @@ function getDelay() {
     }
   } else if (animationSpeed == "Fast") {
     if (algorithm == "Depth-First-Search") {
-      delay = 10;
+      delay = 8;
     } else {
       delay = 5;
     }
