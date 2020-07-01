@@ -23,6 +23,30 @@ td {
     font-size: 20px;
 }
 
+.banner-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+/*  border:1px solid green;*/
+  flex-direction: column;
+    margin-top:13px;
+}
+
+
+.banner-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color:#c0392b;
+}
+
+.btn-space {
+	margin-right: 10px;
+    color:#c0392b;
+    
+}
+
 /*ye hai apne jaha algo aur speed chose krte hai*/
 #dd{
     background-color:#2f3640;
@@ -39,9 +63,7 @@ td {
 }
 
 
-.btn-space {
-	margin-right: 10px;
-}
+
 
 #myNavbar{
     background-color : #2f3640;
